@@ -1,39 +1,39 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"
-import { useState } from "react"
-import VolumeSlider from "./VolumeSlider"
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
-var lowLabel = "Volumen bajo"
-let highLabel = "Volumen alto"
+import VolumeSlider from './VolumeSlider';
+
+const lowLabel = 'Volumen bajo';
+const highLabel = 'Volumen alto';
 
 const meta: Meta<typeof VolumeSlider> = {
-    title: "UI/VolumeSlider",
-    component: VolumeSlider,
-    tags: ["autodocs"],
-    argTypes: {
-        onChange: { action: "changed" },
-    },
-}
+  title: 'UI/VolumeSlider',
+  component: VolumeSlider,
+  tags: ['autodocs'],
+  argTypes: {
+    onChange: { action: 'changed' },
+  },
+};
 
-export default meta
-type Story = StoryObj<typeof VolumeSlider>
+export default meta;
+type Story = StoryObj<typeof VolumeSlider>;
 
 export const Low: Story = {
-    args: {
-        label: lowLabel,
-        defaultValue: 20,
-    },
-}
+  args: {
+    label: lowLabel,
+    defaultValue: 20,
+  },
+};
 
 export const High: Story = {
-    args: {
-        label: highLabel,
-        defaultValue: 80,
-    },
-}
+  args: {
+    label: highLabel,
+    defaultValue: 80,
+  },
+};
 
 export const SinLabel: Story = {
-    args: {
-        label: "",
-        defaultValue: 50,
-    },
-}
+  args: {
+    label: '',
+    defaultValue: 50,
+  },
+};
